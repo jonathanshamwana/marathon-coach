@@ -4,7 +4,7 @@ import '../../styles/Footer.css';
 function Footer() {
   return (
     <footer className="app-footer">
-      <p>&copy; 2024 26Coach. All rights reserved.</p>
+      <p>&copy; 2025 26Club. All rights reserved.</p>
     </footer>
   );
 }

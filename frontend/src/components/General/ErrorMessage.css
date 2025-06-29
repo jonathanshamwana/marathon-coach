@@ -1,0 +1,14 @@
+.coach-error {
+    background-color: rgba(116, 9, 56, 0.1);
+    color: #740938;
+    border: 1px solid rgba(116, 9, 56, 0.2);
+    padding: 1rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    width: fit-content;
+    max-width: 90%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  }
+  
