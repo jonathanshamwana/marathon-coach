@@ -6,6 +6,7 @@ import Footer from './components/General/Footer';
 import Home from './pages/HomePage';  
 import WorkoutLibraryPage from './pages/WorkoutLibraryPage';
 import SignupModal from './components/Auth/SignupModal';
+import './App.css';
 
 function App() {
   const [showSignup, setShowSignup] = useState(false);
@@ -13,18 +14,20 @@ function App() {
   return (
     <AuthProvider>
       <Router>
-        <Header onShowSignup={() => setShowSignup(true)} />
-        <main>
-        <Routes>
-            <Route path="/" element={<Home />} /> 
-            <Route path="/workouts" element={<WorkoutLibraryPage />} />
-        </Routes>
-        <SignupModal 
-          isOpen={showSignup} 
-          onClose={() => setShowSignup(false)}
-        />
-        </main>
-        <Footer />
+        <div className="app-container">
+          <Header onShowSignup={() => setShowSignup(true)} />
+          <main className="main-content">
+            <Routes>
+              <Route path="/" element={<Home />} /> 
+              <Route path="/workouts" element={<WorkoutLibraryPage />} />
+            </Routes>
+            <SignupModal 
+              isOpen={showSignup} 
+              onClose={() => setShowSignup(false)}
+            />
+          </main>
+          <Footer />
+        </div>
       </Router>
     </AuthProvider>
   );

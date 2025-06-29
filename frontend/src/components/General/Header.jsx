@@ -5,10 +5,19 @@ import '../../styles/Header.css';
 const Header = ({ onShowSignup }) => {
   const { currentUser, logout } = useAuth();
   const [showUserMenu, setShowUserMenu] = useState(false);
+  const [showMobileMenu, setShowMobileMenu] = useState(false);
 
   const handleLogout = () => {
     logout();
     setShowUserMenu(false);
+  };
+
+  const toggleMobileMenu = () => {
+    setShowMobileMenu(!showMobileMenu);
+  };
+
+  const closeMobileMenu = () => {
+    setShowMobileMenu(false);
   };
 
   return (
@@ -18,11 +27,12 @@ const Header = ({ onShowSignup }) => {
           <a href="/">26Club</a>
         </div>
         
-        <ul className="nav-links">
+        {/* Desktop Navigation */}
+        <ul className="nav-links desktop-nav">
           <li><a href="/workouts">Workouts</a></li>
         </ul>
         
-        <div className="nav-auth">
+        <div className="nav-auth desktop-auth">
           {currentUser ? (
             <div className="user-menu-container">
               <button 
@@ -51,6 +61,45 @@ const Header = ({ onShowSignup }) => {
               <button onClick={onShowSignup} className="auth-btn signup-btn">
                 Join Waitlist
               </button>
+            </div>
+          )}
+        </div>
+
+        {/* Mobile Hamburger Menu */}
+        <div className="mobile-menu-container">
+          <button 
+            className="hamburger-button"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle mobile menu"
+          >
+            <span className={`hamburger-line ${showMobileMenu ? 'open' : ''}`}></span>
+            <span className={`hamburger-line ${showMobileMenu ? 'open' : ''}`}></span>
+            <span className={`hamburger-line ${showMobileMenu ? 'open' : ''}`}></span>
+          </button>
+          
+          {showMobileMenu && (
+            <div className="mobile-menu">
+              <div className="mobile-menu-content">
+                <a href="/workouts" onClick={closeMobileMenu} className="mobile-menu-link">
+                  Workouts
+                </a>
+                {!currentUser && (
+                  <button onClick={() => { onShowSignup(); closeMobileMenu(); }} className="mobile-menu-link mobile-waitlist-btn">
+                    Join Waitlist
+                  </button>
+                )}
+                {currentUser && (
+                  <>
+                    <div className="mobile-user-info">
+                      <p className="mobile-user-name">{currentUser.name}</p>
+                      <p className="mobile-user-email">{currentUser.email}</p>
+                    </div>
+                    <button onClick={() => { handleLogout(); closeMobileMenu(); }} className="mobile-menu-link mobile-logout-btn">
+                      Sign Out
+                    </button>
+                  </>
+                )}
+              </div>
             </div>
           )}
         </div>
