@@ -37,7 +37,7 @@ class DevelopmentConfig(Config):
 class ProductionConfig(Config):
     """Production configuration"""
     DEBUG = False
-    CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'https://www.26club.org,https://26club.org').split(',')
+    CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'https://www.26club.org,https://26club.org,https://marathon-coach.vercel.app').split(',')
     
     # Production security settings
     SESSION_COOKIE_SECURE = True

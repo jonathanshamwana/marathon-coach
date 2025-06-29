@@ -7,7 +7,7 @@
 In your Vercel project settings, add these environment variables:
 
 ```
-REACT_APP_API_URL=https://your-backend-domain.com
+REACT_APP_API_URL=https://marathon-coach-2psl.onrender.com
 ```
 
 ### 2. Build Settings
