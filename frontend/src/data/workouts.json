@@ -1,0 +1,75 @@
+[
+    {
+      "id": 1,
+      "name": "Yasso 800s",
+      "type": "VO2max",
+      "details": "Run 800 meters at your target marathon pace per mile (e.g. 3:00 if targeting 3-hour marathon). Recover for 90 seconds standing.",
+      "suggested_pace": "Aiming for a 2:45 marathon: run each rep in 2 mins and 45 secs.",
+      "tags": ["track", "marathon prep"]
+    },
+    {
+      "id": 2,
+      "name": "10 x 1km",
+      "type": "VO2max",
+      "details": "Maintain consistent 5K effort. Focus on pacing and form. Ideal on track or flat road loop.",
+      "suggested_pace": "Half-marathon pace.",
+      "tags": ["track", "speed endurance"]
+    },
+    {
+      "id": 3,
+      "name": "3 x 5K",
+      "type": "Threshold",
+      "details": "Start at tempo pace, then increase by 10–15s/km per rep. Use treadmill incline (0.5–1%) to simulate real running.",
+      "suggested_pace": "Start at Half-marathon pace; progress to 5k pace.",
+      "tags": ["treadmill", "tempo", "progression"]
+    },
+    {
+      "id": 4,
+      "name": "8 x Mile Repeats",
+      "type": "Threshold",
+      "details": "Run each mile at threshold pace (~15K pace or effort). 60–90 sec jog or standing rest. Use HR monitor if available.",
+      "suggested_pace": "Between 10k and Half-marathon pace.",
+      "tags": ["marathon prep", "threshold"]
+    },
+    {
+      "id": 5,
+      "name": "20 x 400m",
+      "type": "VO2max",
+      "details": "Run 400m fast but relaxed (~3K pace), with equal jog rest. Focus on quick cadence and smooth form.",
+      "suggested_pace": "Faster than 5k pace.",
+      "tags": ["track", "speed", "form"]
+    },
+    {
+      "id": 6,
+      "name": "5 x 2km",
+      "type": "VO2max",
+      "details": "Run each 2km at ~10K effort. 2-3 min jog recovery. Focus on control and consistent pacing.",
+      "suggested_pace": "10k pace.",
+      "tags": ["rhythm", "endurance", "road"]
+    },
+    {
+      "id": 7,
+      "name": "Fartlek: 2-1",
+      "type": "Fartlek",
+      "details": "Run 2 minutes hard (~10K effort), followed by 1 minute easy jog. Repeat 10 times. Good for trails or rolling terrain.",
+      "suggested_pace": "Between Mile and 5k pace on fast sections.",
+      "tags": ["fartlek", "trail", "versatile"]
+    },
+    {
+      "id": 8,
+      "name": "Hill Repeats: 10 x 60s",
+      "type": "VO2max",
+      "details": "Run for 60 seconds up a hill with 8-13% incline. Walk down and immediately start again.",
+      "suggested_pace": "Mile-to-5k effort.",
+      "tags": ["hills", "power", "speed"]
+    },
+    {
+      "id": 9,
+      "name": "6 Mile Tempo Run",
+      "type": "Threshold",
+      "details": "Run 6 miles at your threshold pace (comfortably hard). Use a flat course or treadmill. Focus on rhythm, posture, and breathing.",
+      "suggested_pace": "Half-marathon pace, give or take a few seconds.",
+      "tags": ["tempo", "threshold", "sustained"]
+    }      
+  ]
+  

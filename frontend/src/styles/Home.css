@@ -41,26 +41,132 @@
 .cta-container {
   max-width: 900px;
   width: 100%;
-  margin: 20px auto;
+  margin: 30px 0;
+  text-align: left;
 }
 
 .cta-button {
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  padding: 15px;
+  padding: 18px 32px;
   text-decoration: none;
-  border-radius: 50%;
+  border-radius: 50px;
+  border: 0;
   font-size: 18px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  height: 200px;
-  width: 200px;
-  margin: 0 auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  height: auto;
+  width: auto;
+  min-width: 200px;
+  margin: 0;
+  box-shadow: 0 8px 25px rgba(116, 9, 56, 0.3);
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .cta-button:hover {
-  background-color: var(--secondary-color);
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(116, 9, 56, 0.4);
+  cursor: pointer;
+}
+
+.cta-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(116, 9, 56, 0.3);
+}
+
+.cta-button:disabled {
+  background: linear-gradient(135deg, #ccc, #999);
+  transform: none;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+}
+
+/* Waitlist Styles */
+.waitlist-container {
+  margin-top: 30px;
+  text-align: left;
+}
+
+.waitlist-text {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.waitlist-form {
+  display: flex;
+  gap: 10px;
+  max-width: 400px;
+}
+
+.waitlist-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 2px solid #e1e1e1;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s ease;
+  background: white;
+}
+
+.waitlist-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(116, 9, 56, 0.1);
+}
+
+.waitlist-input:disabled {
+  background: #f5f5f5;
+  cursor: not-allowed;
+}
+
+.waitlist-button {
+  padding: 12px 20px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.waitlist-button:hover:not(:disabled) {
+  background: var(--secondary-color);
+  transform: translateY(-1px);
+}
+
+.waitlist-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.waitlist-success {
+  margin-top: 10px;
+  color: #28a745;
+  font-size: 14px;
+  font-weight: 500;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .home-subheading {
@@ -74,7 +180,7 @@
 }
 
 .patrick-hand-regular {
-  font-family: "Patrick Hand", cursive;
+  font-family: "Glacial Indifference", sans-serif;
   font-weight: 600;
   font-style: normal;
 }
@@ -102,13 +208,15 @@
 
 /* Wave container styling */
 .wave-container {
-  position: relative;
-  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
   height: 200px;
   overflow: hidden;
-  margin-top: 20px;
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
+  z-index: 10;
 }
 
 .wave svg {
@@ -118,7 +226,7 @@
 }
 
 .wave path {
-  fill: var(--accent-color);
+  fill: var(--primary-color);
   opacity: 0.8;
 }
 
@@ -135,4 +243,81 @@
   width: 80%;
   max-width: 400px;
   margin-top: 20px;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  margin-bottom: 40px;
+  gap: 40px;
+}
+
+.hero-content {
+  flex: 1;
+  text-align: left;
+  z-index: 2;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.club-image {
+  max-width: 75%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
+}
+
+.club-image:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 30px;
+  }
+  
+  .hero-content {
+    text-align: center;
+  }
+  
+  .cta-container {
+    text-align: center;
+  }
+  
+  .club-image {
+    max-width: 75%;
+  }
+  
+  .home-heading {
+    font-size: 60px;
+  }
+  
+  .home-subheading {
+    font-size: 24px;
+  }
+  
+  .waitlist-form {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .waitlist-button {
+    width: 100%;
+  }
 }

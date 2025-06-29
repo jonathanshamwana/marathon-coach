@@ -1,0 +1,70 @@
+.chat-toggle-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1001;
+    cursor: pointer;
+    background: white;
+    border-radius: 50%;
+    padding: 0.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .chat-sidebar {
+    position: fixed;
+    top: 0;
+    right: -350px;
+    width: 300px;
+    height: 100vh;
+    background-color: #f9f9f9;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    padding: 20px;
+    overflow-y: auto;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .chat-date {
+    margin-bottom: 0.5rem;
+  }
+  
+  .chat-sidebar.open {
+    right: 0;
+  }
+  
+  .chat-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 20px;
+    align-items: center;
+  }
+  
+  .chat-bubble {
+    padding: 12px;
+    border-radius: 12px;
+    background-color: #fff;
+    background: linear-gradient(145deg, #c8cbcc, #ebedef);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    width: 100%; 
+    margin: 0rem 0.5rem;
+    cursor: pointer;
+    height: 5.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .chat-snippet {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  
+    line-clamp: 2;
+    box-orient: vertical;
+  
+    font-size: 0.95rem;
+    margin-top: 4px;
+  }
