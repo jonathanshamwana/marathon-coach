@@ -286,38 +286,111 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .home-container {
+    padding: 30px 20px;
+  }
+  
   .hero-section {
     flex-direction: column;
     text-align: center;
     gap: 30px;
+    margin-bottom: 30px;
   }
   
   .hero-content {
     text-align: center;
+    width: 100%;
   }
   
   .cta-container {
     text-align: center;
+    width: 100%;
   }
   
   .club-image {
-    max-width: 75%;
+    max-width: 85%;
   }
   
   .home-heading {
     font-size: 60px;
+    text-align: center;
+    margin-bottom: 15px;
   }
   
   .home-subheading {
     font-size: 24px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 100%;
+    line-height: 1.3;
   }
   
   .waitlist-form {
     flex-direction: column;
     gap: 15px;
+    max-width: 100%;
   }
   
   .waitlist-button {
     width: 100%;
+  }
+  
+  .waitlist-container {
+    text-align: center;
+  }
+  
+  .waitlist-text {
+    text-align: center;
+  }
+}
+
+/* Tablet Responsive */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .hero-section {
+    gap: 30px;
+    padding: 0 20px;
+  }
+  
+  .home-heading {
+    font-size: 80px;
+  }
+  
+  .home-subheading {
+    font-size: 32px;
+  }
+  
+  .club-image {
+    max-width: 70%;
+  }
+}
+
+/* Small Mobile Responsive */
+@media (max-width: 480px) {
+  .home-container {
+    padding: 20px 15px;
+  }
+  
+  .home-heading {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .home-subheading {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  
+  .club-image {
+    max-width: 90%;
+  }
+  
+  .cta-button {
+    padding: 15px 25px;
+    font-size: 16px;
+    min-width: 180px;
+  }
+  
+  .waitlist-form {
+    gap: 12px;
   }
 }
