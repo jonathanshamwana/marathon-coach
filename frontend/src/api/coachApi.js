@@ -1,6 +1,7 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:5000'; // Make sure this matches your Flask dev server
+// Use environment variable for API URL, fallback to localhost for development
+const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
 
 export const sendAudioAndStravaData = async (audioBlob) => {
   const formData = new FormData();
